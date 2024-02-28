@@ -50,7 +50,7 @@ Heap Implementation
   - helper function to get index of left child, 2 * i + 1
   - right child index will be left child index + 1
 - get_parent
-  - helper function to get index of parent index, (i-2) / 2
+  - helper function to get index of parent index, floor((i-2) / 2)
 - swap
 ```
 function swap(a,b){
