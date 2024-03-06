@@ -153,3 +153,55 @@ function BST (v0) {
 ```
 
 ### Depth-first Search (DFS)
+- Go Deep as possible
+- finish vertex
+- retrace
+
+- Discovered List as a Stack
+
+Pseudocode
+```
+function DFS (v) {
+    // v start
+    mark(v) = discovered
+    for each neightbour u of v {
+        DFS(u)
+    }
+    // v is finished
+}
+```
+### Compare
+#### DFS
+- Time Complexity
+  - O(|V| + |E|)
+- Space Complexity
+  - O(|V|)
+- Suitable for vertices that are away
+- Good for dicision trees for games
+
+```
+worst case for DFS
+even no explicity allocate memory, the recursion will allocate space for call stack
+
+O -- O -- O -- O -- O
+```
+
+#### BFS
+- Time Complexity
+  - O(|V| + |E|)
+- Space Complexity
+  - O(|V|)
+- Suitable for vertices that are close
+- Good for finding shortest path
+
+```
+worst cast for BFS
+Queue will be size of |V|-1 
+          O
+         /
+        /
+O ---- O ------ O
+      / \
+     /   \
+    O     O
+```
